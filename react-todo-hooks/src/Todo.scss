@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+
+$myGrey: #646973;
+$myRed: #e95e51;
+$myGreen: #0ebb82;
+$myOrange: #e9c46a;
+$fontColor: #264653;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#root {
+  font-size: 62.5%;
+  font-family: "Open Sans", sans-serif;
+}
+.App {
+  font-size: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  .main-container {
+    width: 90vw;
+    height: 80vh;
+    max-width: 40rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .error {
+      width: 15rem;
+      height: 2rem;
+      font-size:1rem;
+      color:$myRed;
+      display:flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .input-bar {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      max-width: 15rem;
+      h1 {
+        text-shadow: 2px 4px #808080;
+        width: 15rem;
+        text-align: center;
+      }
+      .input {
+        width: 15rem;
+        border-radius: 1rem;
+        outline: none;
+        padding: 0.2rem;
+      }
+      .add-button {
+        position: absolute;
+        top:6.15rem;
+        left:15.2rem;
+        width: 2.1rem;
+        height: 2.1rem;
+        border-radius: 50%;
+        background-color: $myGreen;
+        color: #fff;
+        outline: none;
+        border: 0.1rem solid $fontColor;
+      }
+    }
+  }
+}
+
+.list{
+  width: 100%;
+  height:70vh;
+  margin-top:.5rem;
+  overflow: auto;
+   .task {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     height: 5rem;
+     border-bottom: .1rem solid $myRed;
+     .update{
+       max-width:30rem;
+       width:56vw;
+       display:flex;
+       justify-content: space-between;
+     }
+     .input-update{
+       display:flex;
+       .update-text{
+         outline: none;
+         border: none;
+         font-size: 1.2rem;
+         width:12rem;
+         margin-top:-.5rem;
+         color:$myRed;
+       }
+       span{
+         font-size:1.2rem;
+         cursor: pointer;
+       }
+       
+     }
+     .actions-btn{
+      color:$fontColor;
+      cursor: pointer;
+    } :hover{
+      color:$myOrange;
+    }
+   }
+}
+
+.actions-btn{
+  margin:.2rem;
+}
+
+
+
+::placeholder {
+  padding: 0.5rem;
+}
+
+li{
+  list-style: none;
+}
+.checkbox {
+  margin: auto 5px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  vertical-align: middle;
+  border: 1px solid #808080;
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
+}
+.checkbox:checked {
+  background-color: #0ebb82;
+}
+.checkbox:hover {
+  filter: brightness(110%);
+}
+
+
+.isdone {
+  text-decoration: line-through;
+  text-decoration-color: red;
+}
+
+
+.glb-btn{
+  margin:1rem;
+  min-width:5rem;
+  padding:.2rem;
+  border-radius:10px;
+  outline: none;
+  background-color: $myOrange;
+  box-shadow: 2px 5px #808080;
+} 
+
+.glb-btn :hover{
+  filter:brightness(110%)
+ }
+
+
